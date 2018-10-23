@@ -5,9 +5,8 @@ function greeter(person: string) {
 }
 
 function setUpEvent() {
-    // const button = fromEvent(document.getElementById('button1'), 'click');
-    // button.subscribe(() => console.log('button clicked'));
+    const document1 = fromEvent(document.querySelector('#button1'), 'click');
+    document1.subscribe(x => console.log(`clicked: ${x}`));
 }
-var user = 'Jane User';
 
-document.body.innerHTML = greeter(user);
+setUpEvent();
